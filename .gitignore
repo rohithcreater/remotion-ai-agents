@@ -1,0 +1,8 @@
+.env
+.env.*
+!.env.example
+node_modules/
+renders/
+out/
+*.log
+data/*.zip
