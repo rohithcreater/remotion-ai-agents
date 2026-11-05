@@ -5,7 +5,8 @@ A local Remotion video studio with focused specialist agents. It can inspect a R
 ## What’s included
 
 - **Local agent studio** — browser chat, project file browser, and MP4 preview.
-- **Specialist team** — a Studio Director that chooses a fit, plus focused agents for product ads, explainers, kinetic typography, 3D and characters, social shorts, UI motion, and music visualizers.
+- **Specialist team** — a Studio Director that chooses a fit, plus focused agents for product ads, explainers, kinetic typography, 3D and characters, social shorts, UI motion, music visualizers, and motion review.
+- **Structured video brief** — assemble the product, audience, goal, duration, aspect ratio, supported claims, visual direction, and call to action before sending the prompt.
 - **Project tools** — read and write text files, run recognized npm checks, and render a Remotion composition.
 - **Optional dataset retrieval** — put a licensed `remotion-categories.zip` at `data/remotion-categories.zip` to enable prompt-matched examples.
 - **No app dependencies** — the agent server uses Node.js built-ins. The target Remotion project still needs its own dependencies installed.
@@ -32,8 +33,11 @@ Select **Studio Director** to have the agent identify the best-fit approach for 
 - **Social Shorts Agent** — vertical short-form videos with a fast hook and concise payoff.
 - **UI Motion Agent** — app demos, product screens, and interface micro-interactions.
 - **Music Visualizer Agent** — audio-led pacing and beat-aware motion using available audio assets.
+- **Motion Review Agent** — reviews source code, timing implied by code, readability choices, and likely render blockers; it does not claim to have watched video when no visual evidence is available.
 
 These are specialist playbooks that share the model configured in Settings; the app does not run separate model instances. For marketing work, give the agent the product, audience, supported benefits, desired length, and next step you want viewers to take. It can help make a polished, commercially focused video, but cannot guarantee views, sales, or income.
+
+Use **Build a stronger video brief** to fill in those details and insert an editable brief into the chat. For feedback on an existing composition, select **Motion Review Agent** and ask for a prioritized code review. Add screenshots or frame exports to the prompt if you want feedback on the rendered image; a text-only source review cannot confirm what the video looks like.
 
 The API key is kept in the browser tab’s memory. It is sent to the model endpoint you choose. The agent listens only on `127.0.0.1` by default.
 
