@@ -4,6 +4,12 @@ Build and tune your own AI motion designer for Remotion. This project pairs a lo
 
 Turn your motion skills into commercial video work: make assets for products, clients, and campaigns. The dataset is a strong starting point—not a promise of world-class output, customers, views, or income. Results depend on your model, training, creative direction, offer, and audience.
 
+## Start fine-tuning on Kaggle
+
+**New here? Start with the [Kaggle QLoRA notebook](training/kaggle_qlora.ipynb).** Import it into Kaggle, enable Internet and a GPU, then run the cells. The first run uses 1,000 training examples and 200 validation examples; when that works on your session, set both sample limits to `0` to use all **10,469 training** and **837 validation** examples. The **775 test examples stay held out**. Your adapter is saved to the Kaggle notebook output.
+
+This starter tunes the 1.5B Qwen coder model with QLoRA; it is not a full 31B fine-tune. Follow the [step-by-step training guide](training/README.md) and see [how the dataset is split](DATASET_CARD.md).
+
 ## What’s included
 
 - **Local agent studio** — browser chat, project file browser, and MP4 preview.
