@@ -11,6 +11,7 @@ Turn your motion skills into commercial video work: make assets for products, cl
 - **Structured video brief** — assemble the product, audience, goal, duration, aspect ratio, supported claims, visual direction, and call to action before sending the prompt.
 - **Project tools** — read and write text files, run recognized npm checks, and render a Remotion composition.
 - **12K tuning dataset** — training, validation, and test archives, plus a training-only categorized archive for prompt retrieval. See [DATASET_CARD.md](DATASET_CARD.md) before tuning.
+- **Kaggle fine-tuning kit** — QLoRA notebook, reusable training script, and setup guide in [`training/`](training/). Starts with a small sample and supports all training rows.
 - **No app dependencies** — the agent server uses Node.js built-ins. The target Remotion project still needs its own dependencies installed.
 
 ## Start the agent
@@ -52,6 +53,10 @@ The agent ranks training examples in `data/remotion-categories.zip` by shared pr
 Before training, read the archive’s `README.md`, confirm the dataset license and source terms, preserve the supplied splits, and use a context length suitable for the long assistant outputs (the source reports a median around 11.5k characters). Keep the test split untouched for final evaluation. Do not train on validation or test records.
 
 The app uses the categorized dataset for prompt-based example retrieval; it does not automatically fine-tune a model. The retrieval is lightweight keyword matching, not semantic embeddings, so very different wording may miss useful examples.
+
+## Fine-tune on Kaggle
+
+Open [`training/kaggle_qlora.ipynb`](training/kaggle_qlora.ipynb) in Kaggle, enable Internet and a GPU, and run the cells. The starter run trains a QLoRA adapter for Qwen2.5-Coder-1.5B-Instruct on a 1,000-row sample; edit the notebook command to use `--max-train-samples 0 --max-eval-samples 0` for all 10,469 training and 837 validation rows. The test split is never loaded. See [`training/README.md`](training/README.md) for limits, adapter use, and model-license notes. This is a starter workflow, not a measured claim that tuning improves every model.
 
 ## Agent tools and boundaries
 
