@@ -1,6 +1,8 @@
-# Remotion AI Agent
+# Remotion AI Agent — 12K Motion Design Dataset
 
-A local Remotion video studio with focused specialist agents. It can inspect a Remotion project, edit its source files, run recognized checks, render a composition, and revise it from your feedback.
+Build and tune your own AI motion designer for Remotion. This project pairs a local video studio and specialist agents with **12,081 chat-format motion-design examples** for training and evaluation. Use it to create polished product ads, explainers, 3D scenes, kinetic typography, social videos, and more.
+
+Turn your motion skills into commercial video work: make assets for products, clients, and campaigns. The dataset is a strong starting point—not a promise of world-class output, customers, views, or income. Results depend on your model, training, creative direction, offer, and audience.
 
 ## What’s included
 
